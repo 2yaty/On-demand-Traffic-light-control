@@ -10,7 +10,7 @@ the street, so the light adjusts, giving pedestrians
 enough time to get across.
 
 ## System Design
-###Hardware requirements:
+### Hardware requirements:
 1.ATmega32 microcontroller
 2.One push button connected to INT0 pin for pedestrian
 3.Three LEDs for pedestrians - Green, Yellow, and Red, connected on port A, pins 0, 1, and 2
