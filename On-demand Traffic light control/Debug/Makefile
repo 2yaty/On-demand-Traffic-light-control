@@ -38,8 +38,7 @@ SUBDIRS :=  \
 ../ECUAL \
 ../MCAL/DIO\ Drivers \
 ../Application \
-../MCAL/TIMER\ 0\ Driver \
-../Utilities
+../MCAL/TIMER\ 0\ Driver
 
 
 # Add inputs and outputs from these tool invocations to the build variables 

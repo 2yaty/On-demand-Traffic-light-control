@@ -12,9 +12,7 @@ ECUAL/LED Driver/led.d ECUAL/LED Driver/led.o: ../ECUAL/LED\ Driver/led.c \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
- ../ECUAL/LED\ Driver/../../MCAL/DIO\ Drivers/../../Utilities/dataTypes.h \
- ../ECUAL/LED\ Driver/../../Utilities/dataTypes.h
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h
 
 ../ECUAL/LED\ Driver/led.h:
 
@@ -43,7 +41,3 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
-
-../ECUAL/LED\ Driver/../../MCAL/DIO\ Drivers/../../Utilities/dataTypes.h:
-
-../ECUAL/LED\ Driver/../../Utilities/dataTypes.h:

@@ -5,6 +5,8 @@
  * Author: Mohamed Ali
  */ 
 #include "dio.h"
+#include "../../ECUAL/LED Driver/led.h"
+
 void static (*INT0_callback)(void);
 
 void DIO_init(uint8_t pinNumber , uint8_t portNumber , uint8_t direction){
@@ -215,3 +217,33 @@ ISR (INT0_vect){
 	
 	INT0_callback();
 }
+
+/************************************************************************/
+/* Testing the module                                                   */
+/************************************************************************/
+
+/*
+
+LED ledaya = {0 , PORTn_A};
+	
+void toggel (void);
+	
+int main (void){
+	
+	LED_init_t(&ledaya);
+	enable_external_INT0();
+	
+	INT0_FUNC_CALL(toggel);
+	
+	while(1);
+	
+		
+	
+	return 0 ;
+}
+
+void toggel (void){
+	
+	LED_toggle_t(&ledaya);
+}
+*/

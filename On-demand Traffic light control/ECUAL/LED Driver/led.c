@@ -49,3 +49,25 @@ void LED_off_t (LED* led){
 void LED_toggle_t (LED* led){
 	DIO_toggle(led->ledPin , led->ledPort);
 }
+
+/************************************************************************/
+/* Testing the module                                                   */
+/************************************************************************/
+
+/*
+
+int main (void) {
+	
+	LED_init(PORTn_A , 0);
+	
+	LED_on(PORTn_A , 0);
+	
+	LED ledaya = {0 , PORTn_B};
+		
+	LED_init_t(&ledaya);
+	
+	LED_on_t(&ledaya);
+	
+	return 0;
+	}
+*/

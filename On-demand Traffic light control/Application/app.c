@@ -29,11 +29,12 @@ uint8_t volatile counter =0;
 void app_Start (void){
 	
 	initialize_leds();
-	enable_external_INT0();
-	TIMER0_init();
-	
+
 	TIMER_FUNC_CALL(traffic_orgnization);
 	INT0_FUNC_CALL(pedestrian_mode);
+	
+	enable_external_INT0();
+	TIMER0_init();
 	
 	traffic_orgnization();
 	

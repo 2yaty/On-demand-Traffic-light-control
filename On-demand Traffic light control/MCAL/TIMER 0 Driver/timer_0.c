@@ -9,6 +9,7 @@
 #include <avr/io.h>
 #include <stdint.h>
 #include <avr/interrupt.h>
+#include "../../ECUAL/LED Driver/led.h"
 
 uint8_t i = 0;
 
@@ -39,3 +40,36 @@ ISR(TIMER0_OVF_vect)
 	
 	i++;
 }
+
+/************************************************************************/
+/* Testing the module                                                   */
+/************************************************************************/
+
+/*
+
+// toggling the bit every second.
+
+LED ledaya = {0 , PORTn_A};
+	
+void toggel (void);
+	
+int main (void){
+	
+	LED_init_t(&ledaya);
+	
+	TIMER0_init();
+	
+	TIMER_FUNC_CALL(toggel);
+	
+	while(1);
+	
+		
+	
+	return 0 ;
+}
+
+void toggel (void){
+	
+	LED_toggle_t(&ledaya);
+}
+*/

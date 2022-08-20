@@ -12,7 +12,8 @@ MCAL/DIO Drivers/dio.d MCAL/DIO Drivers/dio.o: ../MCAL/DIO\ Drivers/dio.c \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
- ../MCAL/DIO\ Drivers/../../Utilities/dataTypes.h
+ ../MCAL/DIO\ Drivers/../../ECUAL/LED\ Driver/led.h \
+ ../MCAL/DIO\ Drivers/../../ECUAL/LED\ Driver/../../MCAL/DIO\ Drivers/dio.h
 
 ../MCAL/DIO\ Drivers/dio.h:
 
@@ -40,4 +41,6 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
 
-../MCAL/DIO\ Drivers/../../Utilities/dataTypes.h:
+../MCAL/DIO\ Drivers/../../ECUAL/LED\ Driver/led.h:
+
+../MCAL/DIO\ Drivers/../../ECUAL/LED\ Driver/../../MCAL/DIO\ Drivers/dio.h:

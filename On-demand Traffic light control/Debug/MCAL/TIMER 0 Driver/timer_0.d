@@ -11,7 +11,9 @@ MCAL/TIMER 0 Driver/timer_0.d MCAL/TIMER 0 Driver/timer_0.o: \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
+ ../MCAL/TIMER\ 0\ Driver/../../ECUAL/LED\ Driver/led.h \
+ ../MCAL/TIMER\ 0\ Driver/../../ECUAL/LED\ Driver/../../MCAL/DIO\ Drivers/dio.h
 
 ../MCAL/TIMER\ 0\ Driver/timer_0.h:
 
@@ -38,3 +40,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
+
+../MCAL/TIMER\ 0\ Driver/../../ECUAL/LED\ Driver/led.h:
+
+../MCAL/TIMER\ 0\ Driver/../../ECUAL/LED\ Driver/../../MCAL/DIO\ Drivers/dio.h:

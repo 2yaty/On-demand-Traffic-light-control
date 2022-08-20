@@ -10,13 +10,13 @@
 #define LED_H_
 #include <stdint.h>
 #include "../../MCAL/DIO Drivers/dio.h"
-#include "../../Utilities/dataTypes.h"
+
 
 #define ON 1
 #define OFF 0
 
 typedef struct LED_t {	uint8_t ledPin , ledPort ;	}	LED;
-
+	
 void LED_init(uint8_t ledPort , uint8_t ledPin);
 void LED_on (uint8_t ledPort , uint8_t ledPin);
 void LED_off (uint8_t ledPort , uint8_t ledPin);

@@ -15,8 +15,6 @@ Application/app.d Application/app.o: ../Application/app.c \
  ../Application/../MCAL/TIMER\ 0\ Driver/timer_0.h \
  ../Application/../ECUAL/LED\ Driver/led.h \
  ../Application/../ECUAL/LED\ Driver/../../MCAL/DIO\ Drivers/dio.h \
- ../Application/../ECUAL/LED\ Driver/../../MCAL/DIO\ Drivers/../../Utilities/dataTypes.h \
- ../Application/../ECUAL/LED\ Driver/../../Utilities/dataTypes.h \
  ../Application/../MCAL/DIO\ Drivers/dio.h
 
 ../Application/app.h:
@@ -50,9 +48,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../Application/../ECUAL/LED\ Driver/led.h:
 
 ../Application/../ECUAL/LED\ Driver/../../MCAL/DIO\ Drivers/dio.h:
-
-../Application/../ECUAL/LED\ Driver/../../MCAL/DIO\ Drivers/../../Utilities/dataTypes.h:
-
-../Application/../ECUAL/LED\ Driver/../../Utilities/dataTypes.h:
 
 ../Application/../MCAL/DIO\ Drivers/dio.h:

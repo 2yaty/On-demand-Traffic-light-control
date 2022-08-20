@@ -322,19 +322,20 @@ void app_Start (void){
 	
 	initialize_leds();
  1c2:	0e 94 64 00 	call	0xc8	; 0xc8 <initialize_leds>
-	enable_external_INT0();
- 1c6:	0e 94 65 02 	call	0x4ca	; 0x4ca <enable_external_INT0>
-	TIMER0_init();
- 1ca:	0e 94 9e 02 	call	0x53c	; 0x53c <TIMER0_init>
-	
+
 	TIMER_FUNC_CALL(traffic_orgnization);
- 1ce:	8e e9       	ldi	r24, 0x9E	; 158
- 1d0:	90 e0       	ldi	r25, 0x00	; 0
- 1d2:	0e 94 a5 02 	call	0x54a	; 0x54a <TIMER_FUNC_CALL>
+ 1c6:	8e e9       	ldi	r24, 0x9E	; 158
+ 1c8:	90 e0       	ldi	r25, 0x00	; 0
+ 1ca:	0e 94 a5 02 	call	0x54a	; 0x54a <TIMER_FUNC_CALL>
 	INT0_FUNC_CALL(pedestrian_mode);
- 1d6:	89 e4       	ldi	r24, 0x49	; 73
- 1d8:	90 e0       	ldi	r25, 0x00	; 0
- 1da:	0e 94 72 02 	call	0x4e4	; 0x4e4 <INT0_FUNC_CALL>
+ 1ce:	89 e4       	ldi	r24, 0x49	; 73
+ 1d0:	90 e0       	ldi	r25, 0x00	; 0
+ 1d2:	0e 94 72 02 	call	0x4e4	; 0x4e4 <INT0_FUNC_CALL>
+	
+	enable_external_INT0();
+ 1d6:	0e 94 65 02 	call	0x4ca	; 0x4ca <enable_external_INT0>
+	TIMER0_init();
+ 1da:	0e 94 9e 02 	call	0x53c	; 0x53c <TIMER0_init>
 	
 	traffic_orgnization();
  1de:	0e 94 9e 00 	call	0x13c	; 0x13c <traffic_orgnization>
@@ -397,11 +398,11 @@ void LED_toggle_t (LED* led){
  21c:	08 95       	ret
 
 0000021e <main>:
-#include "Application/app.h"
+
+
 
 int main(void)
 {
-    /* Replace with your application code */
     app_Start();
  21e:	0e 94 e1 00 	call	0x1c2	; 0x1c2 <app_Start>
 }
@@ -906,6 +907,7 @@ ISR(TIMER0_OVF_vect)
 	i++;
  58e:	8f 5f       	subi	r24, 0xFF	; 255
  590:	80 93 77 00 	sts	0x0077, r24	; 0x800077 <i>
+}
  594:	ff 91       	pop	r31
  596:	ef 91       	pop	r30
  598:	bf 91       	pop	r27

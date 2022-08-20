@@ -8,9 +8,11 @@
 #include <avr/io.h>
 #include "Application/app.h"
 
+
+
 int main(void)
 {
-    /* Replace with your application code */
     app_Start();
 }
+
 
