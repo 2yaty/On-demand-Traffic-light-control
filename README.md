@@ -20,4 +20,4 @@ enough time to get across.
 you can install the code on the physical MCU or Proteus as simulation if you have the license.
 
 her is the connections:
-![connections on proteus](https://drive.google.com/file/d/10ZM0MGb2JB_8eFVFkv4wnO9evkiikGkm/view?usp=sharing)
+![connections on proteus](PDF/connections_on_proteus.png)
