@@ -32,24 +32,12 @@ typedef enum pinState {LOW , HIGH , ERROR} pinState;
 
 // functions 
 
-/* DIO_init
-** initialize the data direction register to the required direction.
-*/
 void DIO_init(uint8_t pinNumber , uint8_t portNumber , uint8_t direction);
 
-/* DIO_write
-** set the required bit to 1.
-*/
 void DIO_write(uint8_t pinNumber , uint8_t portNumber , uint8_t value);
 
-/* DIO_toggle 
-** toggle the required bit.
-*/
 void DIO_toggle(uint8_t pinNumber , uint8_t portNumber );
 
-/* DIO_read 
-** return the bit value.
-*/
 pinState DIO_read(uint8_t pinNumber , uint8_t portNumber );
 
 /* enable_external_INT0
