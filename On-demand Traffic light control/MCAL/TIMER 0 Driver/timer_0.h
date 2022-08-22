@@ -10,6 +10,8 @@
 #define TIMER_0_H_
 
 
+
+//functions
 /* TIMER0_init
 
 ** Needed 1 sec for every interrupt.
@@ -20,8 +22,6 @@
 */
 
 void TIMER0_init(void);
-
-
 
 /* TIMER_FUNC_CALL
 
