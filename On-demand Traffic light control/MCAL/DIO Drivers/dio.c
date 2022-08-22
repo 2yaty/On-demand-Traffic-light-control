@@ -205,6 +205,7 @@ DIO_ERROR DIO_toggle(uint8_t pinNumber , uint8_t portNumber ){
 		default:
 		return DIO_WRONG_PORT;
 	}
+	return DIO_OK;
 }
 
 DIO_ERROR DIO_read(uint8_t pinNumber , uint8_t portNumber , uint8_t* value){
