@@ -9,6 +9,8 @@
 #ifndef APP_H_
 #define APP_H_
 
+typedef enum APP_ERROR_t {APP_OK , APP_FAILED} APP_ERROR_t;
+
 /* app_Start
 ** initialize the leds.
 ** set the function that will get executed when the button pressed.
@@ -26,9 +28,9 @@ void app_Start (void);
  */
 void pedestrian_mode(void);
 
-void turn_all_leds_off(void);
+APP_ERROR_t turn_all_leds_off(void);
 
-void initialize_leds (void);
+APP_ERROR_t initialize_leds (void);
 
 /* change_turn
  *	change the lights turn every five seconds

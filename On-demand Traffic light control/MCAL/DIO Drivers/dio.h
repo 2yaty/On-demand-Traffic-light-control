@@ -31,7 +31,6 @@
 
 typedef enum DIO_ERROR {DIO_OK , DIO_WRONG_PIN, DIO_WRONG_PORT, DIO_WRONG_VALUE}DIO_ERROR;
 	
-typedef enum pinState {LOW , HIGH , ERROR} pinState;
 
 // functions 
 

@@ -28,7 +28,7 @@ uint8_t volatile counter =0;
 
 void app_Start (void){
 	
-	initialize_leds();
+	if ( initialize_leds() != APP_OK ) { return; }
 
 	TIMER_FUNC_CALL(traffic_orgnization);
 	INT0_FUNC_CALL(pedestrian_mode);
@@ -85,24 +85,28 @@ void change_turn (void){
 
 
 
-void initialize_leds (void){
+APP_ERROR_t initialize_leds (void){
 	
 	for (int i=0 ; i < 4 ; i++)
 	{
-		LED_init_t(&cars_traffic_lights [i]);
-		LED_init_t(&pedestrian_traffic_lights[i]);
+		if (( LED_init_t(&cars_traffic_lights [i]) != LED_OK ) || ( LED_init_t(&pedestrian_traffic_lights[i]) != LED_OK )) {
+			return APP_FAILED ;
+		}
 	}
 	
-	
+	return APP_OK;
 }
 
-void turn_all_leds_off(void){
+APP_ERROR_t turn_all_leds_off(void){
 	
 	for (int i=0 ; i < 4 ; i++){
 		
-		LED_off_t(&cars_traffic_lights [i]);
-		LED_off_t(&pedestrian_traffic_lights[i]);
+		if (( LED_off_t(&cars_traffic_lights [i]) != LED_OK ) || ( LED_off_t(&pedestrian_traffic_lights[i]) != LED_OK )){
+			return APP_FAILED;
+		}
 	}
+	
+	return APP_OK;
 }
 
 

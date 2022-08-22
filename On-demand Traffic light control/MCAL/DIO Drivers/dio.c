@@ -238,7 +238,7 @@ DIO_ERROR DIO_read(uint8_t pinNumber , uint8_t portNumber , uint8_t* value){
 		return DIO_WRONG_PORT;
 	}
 	
-	return DIO_OK
+	return DIO_OK;
 }
 
 void enable_external_INT0(void){
