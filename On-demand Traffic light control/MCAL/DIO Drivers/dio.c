@@ -9,7 +9,11 @@
 
 void static (*INT0_callback)(void);
 
-void DIO_init(uint8_t pinNumber , uint8_t portNumber , uint8_t direction){
+DIO_ERROR DIO_init(uint8_t pinNumber , uint8_t portNumber , uint8_t direction){
+	
+	if(pinNumber > 7 || pinNumber < 0){
+		return DIO_WRONG_PIN;
+	}
 	
 	switch(portNumber){
 		
@@ -25,6 +29,7 @@ void DIO_init(uint8_t pinNumber , uint8_t portNumber , uint8_t direction){
 			}
 			else{
 				//error handling
+				return DIO_WRONG_VALUE;
 			}
 			break;
 			
@@ -41,6 +46,7 @@ void DIO_init(uint8_t pinNumber , uint8_t portNumber , uint8_t direction){
 			}
 			else{
 				//error handling
+				return DIO_WRONG_VALUE;
 			}
 			break;
 		
@@ -57,6 +63,7 @@ void DIO_init(uint8_t pinNumber , uint8_t portNumber , uint8_t direction){
 		}
 		else{
 			//error handling
+			return DIO_WRONG_VALUE;
 		}
 		break;
 		
@@ -73,12 +80,21 @@ void DIO_init(uint8_t pinNumber , uint8_t portNumber , uint8_t direction){
 		}
 		else{
 			//error handling
+			return DIO_WRONG_VALUE;
 		}
 		break;
+		
+		default:
+		return DIO_WRONG_PORT;
 	}
 	
+	return DIO_OK;
 }
-void DIO_write(uint8_t pinNumber , uint8_t portNumber , uint8_t value){
+DIO_ERROR DIO_write(uint8_t pinNumber , uint8_t portNumber , uint8_t value){
+	
+	if(pinNumber > 7 || pinNumber < 0){
+		return DIO_WRONG_PIN;
+	}
 	
 	switch(portNumber){
 	
@@ -94,6 +110,7 @@ void DIO_write(uint8_t pinNumber , uint8_t portNumber , uint8_t value){
 		}
 		else{
 			//error handling
+			return DIO_WRONG_VALUE;
 		}
 		break;
 	
@@ -110,6 +127,7 @@ void DIO_write(uint8_t pinNumber , uint8_t portNumber , uint8_t value){
 		}
 		else{
 			//error handling
+			return DIO_WRONG_VALUE;
 		}
 		break;
 	
@@ -126,6 +144,7 @@ void DIO_write(uint8_t pinNumber , uint8_t portNumber , uint8_t value){
 		}
 		else{
 			//error handling
+			return DIO_WRONG_VALUE;
 		}
 		break;
 	
@@ -142,60 +161,83 @@ void DIO_write(uint8_t pinNumber , uint8_t portNumber , uint8_t value){
 		}
 		else{
 			//error handling
+			return DIO_WRONG_VALUE;
 		}
 		break;
+		
+		default:
+		return DIO_WRONG_PORT;
 	}
+	return DIO_OK;
 }
 
-void DIO_toggle(uint8_t pinNumber , uint8_t portNumber ){
+DIO_ERROR DIO_toggle(uint8_t pinNumber , uint8_t portNumber ){
 	
-		switch(portNumber){
-			
-			case PORTn_A :
-			
-				PORTA ^= (1<<pinNumber);
-			break;
-			
-			
-			case PORTn_B :
-			
-				PORTB ^= (1<<pinNumber);
-			break;
-			
-			
-			case PORTn_C :
-			
-				PORTC ^= (1<<pinNumber);
-			break;
-			
-			
-			case PORTn_D :
-			
-				PORTD ^= (1<<pinNumber);
-			break;
-		}
-}
-
-pinState DIO_read(uint8_t pinNumber , uint8_t portNumber ){
+	if(pinNumber > 7 || pinNumber < 0){
+		return DIO_WRONG_PIN;
+	}
 	
 	switch(portNumber){
 		
 		case PORTn_A :
-			return (PINA & (1<<pinNumber))>>pinNumber; 
+		
+		PORTA ^= (1<<pinNumber);
+		break;
+		
 		
 		case PORTn_B :
-			return (PINB & (1<<pinNumber))>>pinNumber; 
+		
+		PORTB ^= (1<<pinNumber);
+		break;
+		
 		
 		case PORTn_C :
-			return (PINC & (1<<pinNumber))>>pinNumber; 
+		
+		PORTC ^= (1<<pinNumber);
+		break;
 		
 		
 		case PORTn_D :
-			return (PIND & (1<<pinNumber))>>pinNumber;
+		
+		PORTD ^= (1<<pinNumber);
+		break;
+		
+		default:
+		return DIO_WRONG_PORT;
+	}
+}
+
+DIO_ERROR DIO_read(uint8_t pinNumber , uint8_t portNumber , uint8_t* value){
+	
+	if(pinNumber > 7 || pinNumber < 0){
+		return DIO_WRONG_PIN;
+	}
+	
+	switch(portNumber){
+		
+		case PORTn_A :
+			*value = (PINA & (1<<pinNumber))>>pinNumber; 
+			break;
+			
+		
+		case PORTn_B :
+			*value = (PINB & (1<<pinNumber))>>pinNumber; 
+			break;
+		
+		case PORTn_C :
+			*value = (PINC & (1<<pinNumber))>>pinNumber; 
+			break;
+		
+		
+		case PORTn_D :
+			*value = (PIND & (1<<pinNumber))>>pinNumber;
+			break;
 			
 		default:
-		return ERROR; 
+		return DIO_WRONG_PORT;
 	}
+	
+	return DIO_OK
 }
 
 void enable_external_INT0(void){
